@@ -3,9 +3,16 @@ class AdapterThermalB {
     this.thermalSensorB = thermalSensorB;
   }
 
-  triggerHeatSignature(process) {
-    const test2 = this.thermalSensorB.triggerHeatSignature(process);
-    console.log(test2);
-    return test2;
+  oneDetect(callback) {
+    //lecture du thermalsensor en json
+    const data_json = this.thermalSensorB.callback();
+    const data = JSON.parse(data_json);
+    callback("Temperature B", data.sensor, data.detection, data.date);
   }
+
+  // triggerHeatSignature(process) {
+  //   const test = this.thermalSensorB.triggerHeatSignature(process);
+  //   console.log(test);
+  //   return test;
+  // }
 }

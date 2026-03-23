@@ -13,7 +13,7 @@ class TemperatureSensorA {
     this.threshold = threshold;
   }
   onDetect(callback) {
-    callback(this);
+    callback("temperature A", this);
   }
 }
 
