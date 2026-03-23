@@ -7,13 +7,13 @@ import NotificationLog from "./notificationLog.js";
 
 const salle = new Piece("Salon Principal");
 
-const notiflog = new NotificationLog("log");
-const notifDiscord = new NotificationDiscord("Serveur_Securite_Discord");
-const notifMail = new NotificationMail("admin@batiment.fr");
+// const notiflog = new NotificationLog("log");
+// const notifDiscord = new NotificationDiscord("Serveur_Securite_Discord");
+// const notifMail = new NotificationMail("admin@batiment.fr");
 
-salle.Notification(notiflog);
-salle.Notification(notifDiscord);
-salle.Notification(notifMail);
+// salle.Notification(notiflog);
+// salle.Notification(notifDiscord);
+// salle.Notification(notifMail);
 
 const camera = new CameraA("cuisine");
 const thermalSensor = new ThermalSensorB({
@@ -24,4 +24,4 @@ const thermalSensor = new ThermalSensorB({
 const adapter = new AdapterThermalB(thermalSensor);
 
 salle.Capteur(camera);
-salle.Capteur(adapter);
+salle.Capteur("test adapter", adapter);
