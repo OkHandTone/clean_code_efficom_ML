@@ -22,10 +22,12 @@ class ThermalSensorB {
     this.position = position;
   }
   triggerHeatSignature(process) {
-    sensor = this.name;
-    detection = "thermal";
-    date = currentDate();
-    process();
+    const data_json = {
+      sensor: this.name,
+      detection: "thermal",
+      date: currentDate(),
+    };
+    process(data_json);
   } // Déclenche une donnée complexe json, voir ci
   dessous;
 }

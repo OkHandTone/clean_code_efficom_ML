@@ -1,5 +1,9 @@
-class NotificationLog {
-  constructor() {}
+export default class NotificationLog {
+  constructor(name) {
+    this.name = name;
+  }
 
-  notify(message) {}
+  addEvent(message) {
+    console.log("name", this.name, message);
+  }
 }
