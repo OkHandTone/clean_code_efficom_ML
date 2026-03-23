@@ -1,5 +1,3 @@
-import triggerHeatSignature from "./API";
-
 export default class AdapterThermalB {
   constructor(thermalSensorB) {
     this.thermalSensorB = thermalSensorB;

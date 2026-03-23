@@ -1,13 +1,13 @@
-class CameraA {
+export class CameraA {
   constructor(location) {
     this.location = location;
   }
   onDetect(callback) {
-    callback();
+    callback("location: " + this.location);
   }
 }
 
-class TemperatureSensorA {
+export class TemperatureSensorA {
   constructor(location, threshold) {
     this.location = location;
     this.threshold = threshold;
@@ -17,7 +17,7 @@ class TemperatureSensorA {
   }
 }
 
-class ThermalSensorB {
+export class ThermalSensorB {
   constructor(position) {
     this.position = position;
   }
@@ -25,7 +25,7 @@ class ThermalSensorB {
     const data_json = {
       sensor: this.name,
       detection: "thermal",
-      date: currentDate(),
+      date: new Date(),
     };
     process(data_json);
   } // Déclenche une donnée complexe json, voir ci

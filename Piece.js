@@ -7,14 +7,17 @@ export default class Piece {
 
   Notification(notification) {
     this.notifications.push(notification);
+    console.log(notification);
   }
 
   Capteur(capteur) {
     this.capteurs.push(capteur);
+    console.log(capteur);
 
     capteur.onDetect((messageAlerte) => {
       this.notifications.forEach((notification) => {
-        notification.addEnvent(messageAlerte);
+        notification.addEvent(messageAlerte);
+        console.log(messageAlerte);
       });
     });
   }
