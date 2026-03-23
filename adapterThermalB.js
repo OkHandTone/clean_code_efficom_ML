@@ -5,7 +5,7 @@ export default class AdapterThermalB {
     this.thermalSensorB = thermalSensorB;
   }
 
-  oneDetect(callback) {
+  onDetect(callback) {
     this.thermalSensorB.triggerHeatSignature((data) => {
       const string_sensorB = JSON.stringify(data);
       callback("Temperature B", data.sensor, data.detection, data.date);

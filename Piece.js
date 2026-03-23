@@ -14,7 +14,7 @@ export default class Piece {
 
     capteur.onDetect((messageAlerte) => {
       this.notifications.forEach((notification) => {
-        notification(messageAlerte);
+        notification.addEnvent(messageAlerte);
       });
     });
   }
