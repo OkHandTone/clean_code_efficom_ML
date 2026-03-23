@@ -5,7 +5,7 @@ import NotificationDiscord from "./notificationDiscord.js";
 import NotificationMail from "./notificationMail.js";
 import NotificationLog from "./notificationLog.js";
 
-const salle = new Piece("Salon Principal");
+// const salle = new Piece("Salon Principal");
 
 // const notiflog = new NotificationLog("log");
 // const notifDiscord = new NotificationDiscord("Serveur_Securite_Discord");
