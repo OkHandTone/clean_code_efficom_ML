@@ -1,5 +1,21 @@
-import NotificationDiscord from "./notificationDiscord";
-import NotificationLog from "./notificationLog";
-import NotificationMail from "./notificationMail";
+export default class Piece {
+  constructor(nom) {
+    this.nom = nom;
+    this.capteurs = [];
+    this.notifications = [];
+  }
 
-export default class Piece {}
+  Notification(notification) {
+    this.notifications.push(notification);
+  }
+
+  Capteur(capteur) {
+    this.capteurs.push(capteur);
+
+    capteur.onDetect((messageAlerte) => {
+      this.notifications.forEach((notification) => {
+        notification(messageAlerte);
+      });
+    });
+  }
+}
